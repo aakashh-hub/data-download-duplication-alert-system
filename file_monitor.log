@@ -73,3 +73,149 @@ Time Taken: 3.0 seconds
 2025-03-09 23:48:35,107 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\913de86e-9cdd-4208-bccd-920154b3da39.tmp
 2025-03-09 23:48:35,108 - INFO - [file_monitor.py:281] - Monitoring temporary file: C:\Users\aakas\Downloads\913de86e-9cdd-4208-bccd-920154b3da39.tmp
 2025-03-09 23:49:39,885 - INFO - [file_monitor.py:333] - File monitoring stopped by user
+2025-03-11 22:24:32,935 - INFO - [file_monitor.py:321] - Started file monitoring in: C:\Users\aakas\Downloads
+2025-03-11 22:24:32,936 - INFO - [file_monitor.py:322] - Monitoring configuration:
+2025-03-11 22:24:32,937 - INFO - [file_monitor.py:323] - - Path: C:\Users\aakas\Downloads
+2025-03-11 22:24:32,938 - INFO - [file_monitor.py:324] - - Monitoring for all file types
+2025-03-11 22:24:32,938 - INFO - [file_monitor.py:325] - - Detailed logging enabled
+2025-03-11 22:24:55,523 - INFO - [file_monitor.py:333] - File monitoring stopped by user
+2025-03-11 22:25:11,595 - INFO - [file_monitor.py:321] - Started file monitoring in: C:\Users\aakas\Downloads
+2025-03-11 22:25:11,596 - INFO - [file_monitor.py:322] - Monitoring configuration:
+2025-03-11 22:25:11,596 - INFO - [file_monitor.py:323] - - Path: C:\Users\aakas\Downloads
+2025-03-11 22:25:11,596 - INFO - [file_monitor.py:324] - - Monitoring for all file types
+2025-03-11 22:25:11,597 - INFO - [file_monitor.py:325] - - Detailed logging enabled
+2025-03-11 22:25:26,757 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\Railticketclassdiagram.jpg
+2025-03-11 22:25:26,757 - INFO - [file_monitor.py:286] - Added to pending files: Railticketclassdiagram.jpg
+2025-03-11 22:25:27,603 - INFO - [file_monitor.py:58] - Initial size for Railticketclassdiagram.jpg: 0.04 MB
+2025-03-11 22:25:28,605 - INFO - [file_monitor.py:127] - Stability progress for Railticketclassdiagram.jpg: 1/3
+2025-03-11 22:25:29,607 - INFO - [file_monitor.py:127] - Stability progress for Railticketclassdiagram.jpg: 2/3
+2025-03-11 22:25:30,609 - INFO - [file_monitor.py:127] - Stability progress for Railticketclassdiagram.jpg: 3/3
+2025-03-11 22:25:30,609 - INFO - [file_monitor.py:139] - File Railticketclassdiagram.jpg is ready for processing:
+Final Size: 0.04 MB
+Total Checks: 4
+Time Taken: 3.0 seconds
+2025-03-11 22:25:30,610 - INFO - [file_monitor.py:266] - File ready for processing: C:\Users\aakas\Downloads\Railticketclassdiagram.jpg
+2025-03-11 22:25:30,611 - INFO - [file_monitor.py:204] - Starting to process file: Railticketclassdiagram.jpg
+2025-03-11 22:25:30,612 - INFO - [file_monitor.py:215] - Successfully verified file access: Railticketclassdiagram.jpg
+2025-03-11 22:25:30,613 - INFO - [file_monitor.py:221] - Generating checksum for: Railticketclassdiagram.jpg
+2025-03-11 22:25:30,709 - INFO - [file_monitor.py:243] - Successfully added to database: C:\Users\aakas\Downloads\Railticketclassdiagram.jpg
+2025-03-11 22:25:30,710 - INFO - [file_monitor.py:193] - Removed Railticketclassdiagram.jpg from tracking
+2025-03-11 22:25:30,710 - INFO - [file_monitor.py:254] - Completed processing for: Railticketclassdiagram.jpg
+2025-03-11 22:26:36,490 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\6209f286-90d9-418e-b6c5-e44a94d7298a.tmp
+2025-03-11 22:26:36,491 - INFO - [file_monitor.py:281] - Monitoring temporary file: C:\Users\aakas\Downloads\6209f286-90d9-418e-b6c5-e44a94d7298a.tmp
+2025-03-11 22:26:52,128 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\54a2acc0-602a-4461-a174-9c1cc5bd27f1.tmp
+2025-03-11 22:26:52,131 - INFO - [file_monitor.py:281] - Monitoring temporary file: C:\Users\aakas\Downloads\54a2acc0-602a-4461-a174-9c1cc5bd27f1.tmp
+2025-03-11 22:27:04,250 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:04,253 - INFO - [file_monitor.py:286] - Added to pending files: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:04,765 - INFO - [file_monitor.py:58] - Initial size for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 0.03 MB
+2025-03-11 22:27:05,769 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 1/4
+2025-03-11 22:27:06,772 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 2/4
+2025-03-11 22:27:07,776 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 3/4
+2025-03-11 22:27:08,779 - INFO - [file_monitor.py:100] - 
+File Status Update for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+Current Size: 0.03 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 4.0 seconds
+Stable Count: 3
+Check Count: 5
+Status: Stabilizing
+2025-03-11 22:27:08,782 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 4/4
+2025-03-11 22:27:08,783 - INFO - [file_monitor.py:139] - File incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp is ready for processing:
+Final Size: 0.03 MB
+Total Checks: 5
+Time Taken: 4.0 seconds
+2025-03-11 22:27:08,784 - INFO - [file_monitor.py:266] - File ready for processing: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:08,788 - INFO - [file_monitor.py:204] - Starting to process file: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:08,790 - INFO - [file_monitor.py:215] - Successfully verified file access: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:08,791 - INFO - [file_monitor.py:221] - Generating checksum for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:08,809 - INFO - [file_monitor.py:243] - Successfully added to database: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:08,811 - INFO - [file_monitor.py:193] - Removed incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp from tracking
+2025-03-11 22:27:08,812 - INFO - [file_monitor.py:254] - Completed processing for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 22:27:51,867 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:51,870 - INFO - [file_monitor.py:286] - Added to pending files: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:52,841 - INFO - [file_monitor.py:58] - Initial size for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 0.03 MB
+2025-03-11 22:27:53,845 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 1/4
+2025-03-11 22:27:54,847 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 2/4
+2025-03-11 22:27:55,850 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 3/4
+2025-03-11 22:27:56,865 - INFO - [file_monitor.py:100] - 
+File Status Update for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+Current Size: 0.03 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 4.0 seconds
+Stable Count: 3
+Check Count: 5
+Status: Stabilizing
+2025-03-11 22:27:56,869 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 4/4
+2025-03-11 22:27:56,870 - INFO - [file_monitor.py:139] - File incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp is ready for processing:
+Final Size: 0.03 MB
+Total Checks: 5
+Time Taken: 4.0 seconds
+2025-03-11 22:27:56,872 - INFO - [file_monitor.py:266] - File ready for processing: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:56,873 - INFO - [file_monitor.py:204] - Starting to process file: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:56,875 - INFO - [file_monitor.py:215] - Successfully verified file access: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:56,876 - INFO - [file_monitor.py:221] - Generating checksum for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:27:56,882 - INFO - [file_monitor.py:231] - Duplicate file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:47:56,517 - INFO - [file_monitor.py:296] - User chose to delete duplicate file: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 22:47:56,553 - INFO - [file_monitor.py:193] - Removed incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp from tracking
+2025-03-11 22:47:56,617 - INFO - [file_monitor.py:254] - Completed processing for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:10:47,393 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\54b7fb9e-02c7-408e-9091-d91fb2a1a411.tmp
+2025-03-11 23:10:47,409 - INFO - [file_monitor.py:281] - Monitoring temporary file: C:\Users\aakas\Downloads\54b7fb9e-02c7-408e-9091-d91fb2a1a411.tmp
+2025-03-11 23:39:34,496 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\A71EA920
+2025-03-11 23:39:34,507 - INFO - [file_monitor.py:286] - Added to pending files: A71EA920
+2025-03-11 23:39:35,183 - INFO - [file_monitor.py:261] - Pending file no longer exists: C:\Users\aakas\Downloads\A71EA920
+2025-03-11 23:39:35,189 - INFO - [file_monitor.py:254] - Completed processing for: A71EA920
+2025-03-11 23:45:39,849 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:39,851 - INFO - [file_monitor.py:286] - Added to pending files: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:40,395 - INFO - [file_monitor.py:58] - Initial size for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 0.03 MB
+2025-03-11 23:45:40,397 - INFO - [file_monitor.py:67] - Download speed for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 556.87 MB/s
+2025-03-11 23:45:41,400 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 1/4
+2025-03-11 23:45:42,416 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 2/4
+2025-03-11 23:45:43,423 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 3/4
+2025-03-11 23:45:44,426 - INFO - [file_monitor.py:100] - 
+File Status Update for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+Current Size: 0.03 MB
+Download Speed: 556.87 MB/s
+Time Elapsed: 4.0 seconds
+Stable Count: 3
+Check Count: 5
+Status: Downloading
+2025-03-11 23:45:44,444 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp: 4/4
+2025-03-11 23:45:44,445 - INFO - [file_monitor.py:139] - File incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp is ready for processing:
+Final Size: 0.03 MB
+Total Checks: 5
+Time Taken: 4.1 seconds
+2025-03-11 23:45:44,449 - INFO - [file_monitor.py:266] - File ready for processing: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:44,451 - INFO - [file_monitor.py:204] - Starting to process file: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:44,456 - INFO - [file_monitor.py:215] - Successfully verified file access: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:44,457 - INFO - [file_monitor.py:221] - Generating checksum for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:44,568 - INFO - [file_monitor.py:243] - Successfully added to database: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:45:44,571 - INFO - [file_monitor.py:193] - Removed incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp from tracking
+2025-03-11 23:45:44,572 - INFO - [file_monitor.py:254] - Completed processing for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp
+2025-03-11 23:46:24,114 - INFO - [file_monitor.py:277] - New file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:24,118 - INFO - [file_monitor.py:286] - Added to pending files: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:24,591 - INFO - [file_monitor.py:58] - Initial size for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 0.03 MB
+2025-03-11 23:46:25,594 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 1/4
+2025-03-11 23:46:26,605 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 2/4
+2025-03-11 23:46:27,608 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 3/4
+2025-03-11 23:46:28,611 - INFO - [file_monitor.py:100] - 
+File Status Update for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+Current Size: 0.03 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 4.0 seconds
+Stable Count: 3
+Check Count: 5
+Status: Stabilizing
+2025-03-11 23:46:28,629 - INFO - [file_monitor.py:127] - Stability progress for incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp: 4/4
+2025-03-11 23:46:28,631 - INFO - [file_monitor.py:139] - File incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp is ready for processing:
+Final Size: 0.03 MB
+Total Checks: 5
+Time Taken: 4.0 seconds
+2025-03-11 23:46:28,633 - INFO - [file_monitor.py:266] - File ready for processing: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:28,638 - INFO - [file_monitor.py:204] - Starting to process file: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:28,642 - INFO - [file_monitor.py:215] - Successfully verified file access: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:28,644 - INFO - [file_monitor.py:221] - Generating checksum for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:46:28,652 - INFO - [file_monitor.py:231] - Duplicate file detected: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:47:15,531 - INFO - [file_monitor.py:296] - User chose to delete duplicate file: C:\Users\aakas\Downloads\incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:47:15,562 - INFO - [file_monitor.py:193] - Removed incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp from tracking
+2025-03-11 23:47:15,574 - INFO - [file_monitor.py:254] - Completed processing for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
+2025-03-11 23:48:18,288 - INFO - [file_monitor.py:333] - File monitoring stopped by user
