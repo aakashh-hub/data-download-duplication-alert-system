@@ -304,3 +304,99 @@ Time Taken: 2.7 seconds
 2025-03-22 18:43:09,084 - INFO - [file_monitor.py:237] - Removed pexels-photo-1108099 (1).jpeg from tracking
 2025-03-22 18:43:09,085 - INFO - [file_monitor.py:324] - Completed processing for: pexels-photo-1108099 (1).jpeg
 2025-03-22 18:43:40,815 - INFO - [file_monitor.py:459] - File monitoring stopped by user
+2025-03-22 18:48:28,520 - INFO - [file_monitor.py:447] - Started file monitoring in: C:\Users\aakas\Downloads
+2025-03-22 18:48:28,521 - INFO - [file_monitor.py:448] - Monitoring configuration:
+2025-03-22 18:48:28,522 - INFO - [file_monitor.py:449] - - Path: C:\Users\aakas\Downloads
+2025-03-22 18:48:28,522 - INFO - [file_monitor.py:450] - - Monitoring for all file types
+2025-03-22 18:48:28,522 - INFO - [file_monitor.py:451] - - Detailed logging enabled
+2025-03-22 18:49:01,572 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\0f399c30-d117-4d34-aaee-78ba7f0df723.tmp
+2025-03-22 18:49:01,573 - INFO - [file_monitor.py:362] - Monitoring temporary file: C:\Users\aakas\Downloads\0f399c30-d117-4d34-aaee-78ba7f0df723.tmp
+2025-03-22 18:49:01,604 - INFO - [file_monitor.py:65] - Initial size for 0f399c30-d117-4d34-aaee-78ba7f0df723.tmp: 0.48 MB
+2025-03-22 18:49:02,989 - INFO - [file_monitor.py:237] - Removed 0f399c30-d117-4d34-aaee-78ba7f0df723.tmp from tracking
+2025-03-22 18:49:02,989 - INFO - [file_monitor.py:411] - Added completed download to pending: Unconfirmed 101864.crdownload
+2025-03-22 18:49:03,542 - INFO - [file_monitor.py:65] - Initial size for Unconfirmed 101864.crdownload: 1.02 MB
+2025-03-22 18:49:03,571 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 0.55 MB/s
+2025-03-22 18:49:04,541 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 0.53 MB/s
+2025-03-22 18:49:05,543 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 0.83 MB/s
+2025-03-22 18:49:06,544 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 17.48 MB/s
+2025-03-22 18:49:06,545 - INFO - [file_monitor.py:114] - 
+File Status Update for: Unconfirmed 101864.crdownload
+Current Size: 19.88 MB
+Download Speed: 17.48 MB/s
+Time Elapsed: 3.0 seconds
+Stable Count: 0
+Check Count: 5
+Status: Downloading
+2025-03-22 18:49:06,547 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 31.22 MB/s
+2025-03-22 18:49:06,548 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 31.31 MB/s
+2025-03-22 18:49:07,036 - INFO - [file_monitor.py:75] - Download speed for Unconfirmed 101864.crdownload: 14.90 MB/s
+2025-03-22 18:49:07,039 - INFO - [file_monitor.py:114] - 
+File Status Update for: Unconfirmed 101864.crdownload
+Current Size: 27.28 MB
+Download Speed: 14.90 MB/s
+Time Elapsed: 3.5 seconds
+Stable Count: 0
+Check Count: 10
+Status: Downloading
+2025-03-22 18:49:07,073 - INFO - [file_monitor.py:237] - Removed Unconfirmed 101864.crdownload from tracking
+2025-03-22 18:49:07,073 - INFO - [file_monitor.py:411] - Added completed download to pending: python-3.13.2-amd64.exe
+2025-03-22 18:49:07,207 - INFO - [file_monitor.py:65] - Initial size for python-3.13.2-amd64.exe: 27.28 MB
+2025-03-22 18:49:07,545 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64.exe: 1/5
+2025-03-22 18:49:08,547 - INFO - [file_monitor.py:114] - 
+File Status Update for: python-3.13.2-amd64.exe
+Current Size: 27.28 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 1.3 seconds
+Stable Count: 1
+Check Count: 5
+Status: Stabilizing
+2025-03-22 18:49:08,549 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64.exe: 2/5
+2025-03-22 18:49:09,550 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64.exe: 3/5
+2025-03-22 18:49:10,553 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64.exe: 4/5
+2025-03-22 18:49:11,556 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64.exe: 5/5
+2025-03-22 18:49:11,557 - INFO - [file_monitor.py:164] - File python-3.13.2-amd64.exe is ready for processing:
+Final Size: 27.28 MB
+Total Checks: 8
+Time Taken: 4.4 seconds
+2025-03-22 18:49:11,558 - INFO - [file_monitor.py:346] - File ready for processing: C:\Users\aakas\Downloads\python-3.13.2-amd64.exe
+2025-03-22 18:49:11,559 - INFO - [file_monitor.py:265] - Starting to process file: python-3.13.2-amd64.exe
+2025-03-22 18:49:11,559 - INFO - [file_monitor.py:276] - Successfully verified file access: python-3.13.2-amd64.exe
+2025-03-22 18:49:11,560 - INFO - [file_monitor.py:288] - Generating checksum for: python-3.13.2-amd64.exe
+2025-03-22 18:49:11,663 - INFO - [file_monitor.py:310] - Successfully added to database: C:\Users\aakas\Downloads\python-3.13.2-amd64.exe
+2025-03-22 18:49:11,664 - INFO - [file_monitor.py:237] - Removed python-3.13.2-amd64.exe from tracking
+2025-03-22 18:49:11,665 - INFO - [file_monitor.py:324] - Completed processing for: python-3.13.2-amd64.exe
+2025-03-22 18:50:11,601 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\09cc6ee1-b37b-45da-849e-180a2a04d787.tmp
+2025-03-22 18:50:11,602 - INFO - [file_monitor.py:362] - Monitoring temporary file: C:\Users\aakas\Downloads\09cc6ee1-b37b-45da-849e-180a2a04d787.tmp
+2025-03-22 18:50:11,612 - INFO - [file_monitor.py:65] - Initial size for 09cc6ee1-b37b-45da-849e-180a2a04d787.tmp: 1.75 MB
+2025-03-22 18:50:12,494 - INFO - [file_monitor.py:237] - Removed 09cc6ee1-b37b-45da-849e-180a2a04d787.tmp from tracking
+2025-03-22 18:50:12,494 - INFO - [file_monitor.py:411] - Added completed download to pending: Unconfirmed 685594.crdownload
+2025-03-22 18:50:12,655 - INFO - [file_monitor.py:65] - Initial size for Unconfirmed 685594.crdownload: 27.28 MB
+2025-03-22 18:50:12,685 - INFO - [file_monitor.py:237] - Removed Unconfirmed 685594.crdownload from tracking
+2025-03-22 18:50:12,686 - INFO - [file_monitor.py:411] - Added completed download to pending: python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:12,691 - INFO - [file_monitor.py:65] - Initial size for python-3.13.2-amd64 (1).exe: 27.28 MB
+2025-03-22 18:50:12,691 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64 (1).exe: 1/5
+2025-03-22 18:50:13,694 - INFO - [file_monitor.py:114] - 
+File Status Update for: python-3.13.2-amd64 (1).exe
+Current Size: 27.28 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 1.0 seconds
+Stable Count: 1
+Check Count: 5
+Status: Stabilizing
+2025-03-22 18:50:13,697 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64 (1).exe: 2/5
+2025-03-22 18:50:14,698 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64 (1).exe: 3/5
+2025-03-22 18:50:15,699 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64 (1).exe: 4/5
+2025-03-22 18:50:16,702 - INFO - [file_monitor.py:148] - Stability progress for python-3.13.2-amd64 (1).exe: 5/5
+2025-03-22 18:50:16,703 - INFO - [file_monitor.py:164] - File python-3.13.2-amd64 (1).exe is ready for processing:
+Final Size: 27.28 MB
+Total Checks: 8
+Time Taken: 4.0 seconds
+2025-03-22 18:50:16,704 - INFO - [file_monitor.py:346] - File ready for processing: C:\Users\aakas\Downloads\python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:16,721 - INFO - [file_monitor.py:265] - Starting to process file: python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:16,723 - INFO - [file_monitor.py:276] - Successfully verified file access: python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:16,724 - INFO - [file_monitor.py:288] - Generating checksum for: python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:16,773 - INFO - [file_monitor.py:298] - Duplicate file detected: C:\Users\aakas\Downloads\python-3.13.2-amd64 (1).exe matches C:\Users\aakas\Downloads\python-3.13.2-amd64.exe
+2025-03-22 18:50:20,909 - INFO - [file_monitor.py:421] - User chose to delete duplicate file: C:\Users\aakas\Downloads\python-3.13.2-amd64 (1).exe
+2025-03-22 18:50:20,924 - INFO - [file_monitor.py:237] - Removed python-3.13.2-amd64 (1).exe from tracking
+2025-03-22 18:50:20,925 - INFO - [file_monitor.py:324] - Completed processing for: python-3.13.2-amd64 (1).exe
+2025-03-22 18:56:18,534 - INFO - [file_monitor.py:459] - File monitoring stopped by user

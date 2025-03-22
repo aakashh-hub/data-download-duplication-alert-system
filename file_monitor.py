@@ -429,7 +429,7 @@ class FileHandler(FileSystemEventHandler):
         result = messagebox.askquestion("Duplicate File Detected",
                                       f"Duplicate file detected: {os.path.basename(file_path)}\n"
                                       f"Matches existing file: {os.path.basename(existing_path)}\n\n"
-                                      "Do you want to keep it or delete it?",
+                                      "Do you want to delete it?",
                                       icon='warning')
         if result == 'yes':
             on_keep()
