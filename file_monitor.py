@@ -34,11 +34,13 @@ class FileState:
         self.last_size_change = datetime.now()
         self.download_speed = 0
         self.is_downloading = False
+        self.last_accessed = datetime.now()
 
 class FileTracker:
     def __init__(self):
         self.files = defaultdict(FileState)
         self.temp_file_mapping = {}  # Maps temporary files to their final names
+        self.known_temp_extensions = ['.crdownload', '.tmp', '.part', '.download', '.partial']
 
     def update_file_state(self, file_path):
         """Update and return detailed file state information."""
@@ -48,8 +50,13 @@ class FileTracker:
 
             state = self.files[file_path]
             current_time = datetime.now()
-            current_size = os.path.getsize(file_path)
-            current_modified = os.path.getmtime(file_path)
+            
+            try:
+                current_size = os.path.getsize(file_path)
+                current_modified = os.path.getmtime(file_path)
+            except (FileNotFoundError, PermissionError) as e:
+                logger.warning(f"Cannot access file {os.path.basename(file_path)}: {str(e)}")
+                return None
 
             # Initialize if this is the first check
             if state.initial_size == 0:
@@ -64,12 +71,19 @@ class FileTracker:
                 state.download_speed = size_diff / time_diff
                 state.last_size_change = current_time
                 state.is_downloading = True
+                state.stable_count = 0  # Reset stable count when size changes
                 logger.info(f"Download speed for {os.path.basename(file_path)}: {state.download_speed/1024/1024:.2f} MB/s")
+            elif current_size == state.size and time_diff > 5:  # No size change for 5 seconds
+                # If size hasn't changed for 5 seconds, consider download paused or completed
+                if state.is_downloading:
+                    logger.info(f"Download appears to have paused or completed for {os.path.basename(file_path)}")
+                state.is_downloading = False
 
             # Update state
             state.size = current_size
             state.last_modified = current_modified
             state.check_count += 1
+            state.last_accessed = current_time
 
             # Log detailed status every 5 checks
             if state.check_count % 5 == 0:
@@ -104,6 +118,14 @@ class FileTracker:
     def is_file_ready(self, file_path):
         """Determine if a file is ready for processing with detailed checks."""
         try:
+            # Skip if file doesn't exist
+            if not os.path.exists(file_path):
+                return False
+                
+            # Skip temporary download files
+            if any(file_path.endswith(ext) for ext in self.known_temp_extensions):
+                return False
+                
             state = self.update_file_state(file_path)
             if not state:
                 return False
@@ -116,11 +138,10 @@ class FileTracker:
             required_stable_checks = self.get_required_stable_checks(ext, size_mb)
             
             # Check if file size hasn't changed
-            if state.size == state.initial_size and state.check_count > 1:
+            if not state.is_downloading and state.size == state.size:
                 state.stable_count += 1
             else:
                 state.stable_count = 0
-                state.initial_size = state.size
 
             # Log stability progress
             if state.stable_count > 0:
@@ -133,7 +154,11 @@ class FileTracker:
                     return False
 
             # Check if file is ready
-            is_ready = state.stable_count >= required_stable_checks
+            is_ready = (
+                state.stable_count >= required_stable_checks and  # Enough stable checks
+                not state.is_downloading and  # Not actively downloading
+                self.can_access_file(file_path)  # File can be accessed
+            )
 
             if is_ready:
                 logger.info(f"File {os.path.basename(file_path)} is ready for processing:\n"
@@ -146,19 +171,36 @@ class FileTracker:
         except Exception as e:
             logger.error(f"Error checking file readiness for {file_path}: {str(e)}")
             return False
+            
+    def can_access_file(self, file_path):
+        """Check if the file can be accessed for reading."""
+        try:
+            with open(file_path, 'rb') as f:
+                f.read(1)
+            return True
+        except (PermissionError, OSError):
+            logger.warning(f"File {os.path.basename(file_path)} is locked by another process")
+            return False
+        except Exception as e:
+            logger.error(f"Error accessing file {file_path}: {str(e)}")
+            return False
 
     def get_required_stable_checks(self, ext, size_mb):
         """Determine required stable checks based on file type and size."""
         # Base checks for different file types
         if ext.lower() in ['.jpg', '.jpeg', '.png', '.gif']:
             base_checks = 3
-        elif ext.lower() in ['.exe', '.msi', '.zip', '.rar']:
+        elif ext.lower() in ['.exe', '.msi', '.zip', '.rar', '.7z']:
             base_checks = 5
+        elif ext.lower() in ['.mp4', '.mkv', '.avi', '.mov']:
+            base_checks = 6  # Video files often need more stability checks
         else:
             base_checks = 4
 
         # Adjust for file size
-        if size_mb > 500:  # > 500MB
+        if size_mb > 1000:  # > 1GB
+            return base_checks + 4
+        elif size_mb > 500:  # > 500MB
             return base_checks + 3
         elif size_mb > 100:  # > 100MB
             return base_checks + 2
@@ -169,16 +211,18 @@ class FileTracker:
     def check_large_file_stability(self, file_path, state):
         """Additional stability checks for large files."""
         try:
-            # Check for reasonable download speed
-            if state.is_downloading and state.download_speed < 1024:  # Less than 1 KB/s
-                logger.warning(f"Download speed too low for {os.path.basename(file_path)}")
-                return False
+            # If download has stalled for too long, consider it ready
+            if not state.is_downloading:
+                stall_time = (datetime.now() - state.last_size_change).total_seconds()
+                if stall_time > 30:  # 30 seconds with no change
+                    logger.info(f"Download appears to have completed for {os.path.basename(file_path)}")
+                    return True
 
             # Check for timeout on large files
             elapsed_time = (datetime.now() - state.first_seen).total_seconds()
             if elapsed_time > 3600:  # 1 hour timeout
                 logger.warning(f"Download timeout for {os.path.basename(file_path)}")
-                return False
+                return True  # Still return true to process the file even with timeout
 
             return True
 
@@ -192,15 +236,32 @@ class FileTracker:
             del self.files[file_path]
             logger.info(f"Removed {os.path.basename(file_path)} from tracking")
 
+    def clean_old_files(self, max_age_seconds=3600):
+        """Clean up files that have been tracked for too long."""
+        current_time = datetime.now()
+        for file_path in list(self.files.keys()):
+            state = self.files[file_path]
+            age = (current_time - state.last_accessed).total_seconds()
+            if age > max_age_seconds:
+                logger.info(f"Removing stale file from tracking: {os.path.basename(file_path)}")
+                self.remove_file(file_path)
+
 class FileHandler(FileSystemEventHandler):
     def __init__(self, app):
         self.app = app
         self.file_tracker = FileTracker()
         self.pending_files = set()
+        self.processed_files = set()  # Keep track of processed files
+        self.last_cleanup = datetime.now()
 
     def process_file(self, file_path):
         """Process a file once it's ready."""
         try:
+            # Skip if already processed
+            if file_path in self.processed_files:
+                logger.info(f"File already processed: {os.path.basename(file_path)}")
+                return
+                
             logger.info(f"Starting to process file: {os.path.basename(file_path)}")
 
             # Final verification
@@ -217,6 +278,12 @@ class FileHandler(FileSystemEventHandler):
                 logger.error(f"Cannot access file {file_path}: {str(e)}")
                 return
 
+            # Skip zero-byte files
+            file_size = os.path.getsize(file_path)
+            if file_size == 0:
+                logger.info(f"Skipping zero-byte file: {os.path.basename(file_path)}")
+                return
+
             # Generate checksum
             logger.info(f"Generating checksum for: {os.path.basename(file_path)}")
             checksum = generate_checksum(file_path)
@@ -228,20 +295,23 @@ class FileHandler(FileSystemEventHandler):
             with self.app.app_context():
                 existing_file = FileRecord.query.filter_by(checksum=checksum).first()
                 if existing_file:
-                    logger.info(f"Duplicate file detected: {file_path}")
-                    self.prompt_user(file_path)
+                    logger.info(f"Duplicate file detected: {file_path} matches {existing_file.file_path}")
+                    self.prompt_user(file_path, existing_file.file_path)
                 else:
                     new_file = FileRecord(
                         checksum=checksum,
                         file_name=os.path.basename(file_path),
                         file_path=file_path,
-                        file_size=os.path.getsize(file_path),
+                        file_size=file_size,
                         file_type=os.path.splitext(file_path)[1]
                     )
                     db.session.add(new_file)
                     db.session.commit()
                     logger.info(f"Successfully added to database: {file_path}")
 
+            # Mark as processed
+            self.processed_files.add(file_path)
+            
         except Exception as e:
             logger.error(f"Error processing file {file_path}: {str(e)}")
         finally:
@@ -255,6 +325,16 @@ class FileHandler(FileSystemEventHandler):
 
     def check_pending_files(self):
         """Check if any pending files are ready for processing."""
+        # First, perform periodic cleanup
+        current_time = datetime.now()
+        if (current_time - self.last_cleanup).total_seconds() > 3600:  # Cleanup once per hour
+            self.file_tracker.clean_old_files()
+            # Limit the size of processed files set to prevent memory leaks
+            if len(self.processed_files) > 1000:
+                self.processed_files = set(list(self.processed_files)[-500:])
+            self.last_cleanup = current_time
+            
+        # Then check pending files
         for file_path in list(self.pending_files):
             try:
                 if not os.path.exists(file_path):
@@ -270,22 +350,67 @@ class FileHandler(FileSystemEventHandler):
                 logger.error(f"Error checking pending file {file_path}: {str(e)}")
 
     def on_created(self, event):
+        """Handle file creation events."""
         if event.is_directory:
             return
 
         file_path = event.src_path
         logger.info(f"New file detected: {file_path}")
 
-        # Handle temporary files
-        if any(file_path.endswith(ext) for ext in ['.crdownload', '.tmp', '.part']):
+        # Skip temporary download files but track them
+        if any(file_path.endswith(ext) for ext in self.file_tracker.known_temp_extensions):
             logger.info(f"Monitoring temporary file: {file_path}")
+            # Still track them to detect when download completes
+            if file_path not in self.pending_files:
+                self.pending_files.add(file_path)
             return
 
         # Add to pending files
         self.pending_files.add(file_path)
         logger.info(f"Added to pending files: {os.path.basename(file_path)}")
 
-    def prompt_user(self, file_path):
+    def on_modified(self, event):
+        """Handle file modification events."""
+        if event.is_directory:
+            return
+            
+        file_path = event.src_path
+        
+        # If file is already pending, update its state
+        if file_path in self.pending_files:
+            self.file_tracker.update_file_state(file_path)
+            return
+            
+        # Check if this is a completed download (temp file being renamed)
+        base_name = os.path.basename(file_path)
+        # If the file doesn't have a temp extension, add it to pending
+        if not any(file_path.endswith(ext) for ext in self.file_tracker.known_temp_extensions):
+            if file_path not in self.pending_files and file_path not in self.processed_files:
+                logger.info(f"Modified file detected: {file_path}")
+                self.pending_files.add(file_path)
+
+    def on_moved(self, event):
+        """Handle file move events, which can indicate a download completing."""
+        if event.is_directory:
+            return
+            
+        src_path = event.src_path
+        dest_path = event.dest_path
+        
+        # Check if this is a download completing (temp file being renamed)
+        if any(src_path.endswith(ext) for ext in self.file_tracker.known_temp_extensions):
+            logger.info(f"Download appears to have completed: {os.path.basename(src_path)} → {os.path.basename(dest_path)}")
+            
+            # Remove the source file from tracking
+            self.file_tracker.remove_file(src_path)
+            self.pending_files.discard(src_path)
+            
+            # Add destination file to pending
+            if dest_path not in self.processed_files:
+                self.pending_files.add(dest_path)
+                logger.info(f"Added completed download to pending: {os.path.basename(dest_path)}")
+
+    def prompt_user(self, file_path, existing_path):
         def on_keep():
             root.destroy()
             logger.info(f"User chose to keep duplicate file: {file_path}")
@@ -303,6 +428,7 @@ class FileHandler(FileSystemEventHandler):
         root.attributes("-topmost", True)
         result = messagebox.askquestion("Duplicate File Detected",
                                       f"Duplicate file detected: {os.path.basename(file_path)}\n"
+                                      f"Matches existing file: {os.path.basename(existing_path)}\n\n"
                                       "Do you want to keep it or delete it?",
                                       icon='warning')
         if result == 'yes':

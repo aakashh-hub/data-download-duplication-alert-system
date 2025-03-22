@@ -219,3 +219,88 @@ Time Taken: 4.0 seconds
 2025-03-11 23:47:15,562 - INFO - [file_monitor.py:193] - Removed incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp from tracking
 2025-03-11 23:47:15,574 - INFO - [file_monitor.py:254] - Completed processing for: incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001 (1).webp
 2025-03-11 23:48:18,288 - INFO - [file_monitor.py:333] - File monitoring stopped by user
+2025-03-22 18:41:11,353 - INFO - [file_monitor.py:447] - Started file monitoring in: C:\Users\aakas\Downloads
+2025-03-22 18:41:11,354 - INFO - [file_monitor.py:448] - Monitoring configuration:
+2025-03-22 18:41:11,354 - INFO - [file_monitor.py:449] - - Path: C:\Users\aakas\Downloads
+2025-03-22 18:41:11,355 - INFO - [file_monitor.py:450] - - Monitoring for all file types
+2025-03-22 18:41:11,356 - INFO - [file_monitor.py:451] - - Detailed logging enabled
+2025-03-22 18:42:28,190 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\af65634b-4129-433b-acd6-cad0e5254828.tmp
+2025-03-22 18:42:28,191 - INFO - [file_monitor.py:362] - Monitoring temporary file: C:\Users\aakas\Downloads\af65634b-4129-433b-acd6-cad0e5254828.tmp
+2025-03-22 18:42:28,316 - INFO - [file_monitor.py:65] - Initial size for af65634b-4129-433b-acd6-cad0e5254828.tmp: 0.96 MB
+2025-03-22 18:42:33,178 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\pexels-photo-1108099.jpeg
+2025-03-22 18:42:33,178 - INFO - [file_monitor.py:370] - Added to pending files: pexels-photo-1108099.jpeg
+2025-03-22 18:42:33,392 - INFO - [file_monitor.py:341] - Pending file no longer exists: C:\Users\aakas\Downloads\pexels-photo-1108099.jpeg
+2025-03-22 18:42:33,393 - INFO - [file_monitor.py:324] - Completed processing for: pexels-photo-1108099.jpeg
+2025-03-22 18:42:33,530 - INFO - [file_monitor.py:237] - Removed af65634b-4129-433b-acd6-cad0e5254828.tmp from tracking
+2025-03-22 18:42:33,531 - INFO - [file_monitor.py:411] - Added completed download to pending: pexels-photo-1108099.jpeg.crdownload
+2025-03-22 18:42:33,599 - INFO - [file_monitor.py:411] - Added completed download to pending: pexels-photo-1108099.jpeg
+2025-03-22 18:42:33,600 - INFO - [file_monitor.py:65] - Initial size for pexels-photo-1108099.jpeg: 0.96 MB
+2025-03-22 18:42:34,395 - INFO - [file_monitor.py:114] - 
+File Status Update for: pexels-photo-1108099.jpeg
+Current Size: 0.96 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 0.8 seconds
+Stable Count: 0
+Check Count: 5
+Status: Stabilizing
+2025-03-22 18:42:34,396 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099.jpeg: 1/3
+2025-03-22 18:42:35,398 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099.jpeg: 2/3
+2025-03-22 18:42:36,400 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099.jpeg: 3/3
+2025-03-22 18:42:36,402 - INFO - [file_monitor.py:164] - File pexels-photo-1108099.jpeg is ready for processing:
+Final Size: 0.96 MB
+Total Checks: 7
+Time Taken: 2.8 seconds
+2025-03-22 18:42:36,403 - INFO - [file_monitor.py:346] - File ready for processing: C:\Users\aakas\Downloads\pexels-photo-1108099.jpeg
+2025-03-22 18:42:36,404 - INFO - [file_monitor.py:265] - Starting to process file: pexels-photo-1108099.jpeg
+2025-03-22 18:42:36,405 - INFO - [file_monitor.py:276] - Successfully verified file access: pexels-photo-1108099.jpeg
+2025-03-22 18:42:36,406 - INFO - [file_monitor.py:288] - Generating checksum for: pexels-photo-1108099.jpeg
+2025-03-22 18:42:36,477 - INFO - [file_monitor.py:310] - Successfully added to database: C:\Users\aakas\Downloads\pexels-photo-1108099.jpeg
+2025-03-22 18:42:36,478 - INFO - [file_monitor.py:237] - Removed pexels-photo-1108099.jpeg from tracking
+2025-03-22 18:42:36,478 - INFO - [file_monitor.py:324] - Completed processing for: pexels-photo-1108099.jpeg
+2025-03-22 18:42:51,729 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp
+2025-03-22 18:42:51,730 - INFO - [file_monitor.py:362] - Monitoring temporary file: C:\Users\aakas\Downloads\f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp
+2025-03-22 18:42:51,733 - INFO - [file_monitor.py:65] - Initial size for f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp: 0.12 MB
+2025-03-22 18:42:51,739 - INFO - [file_monitor.py:75] - Download speed for f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp: 31.19 MB/s
+2025-03-22 18:42:51,745 - INFO - [file_monitor.py:75] - Download speed for f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp: 16.16 MB/s
+2025-03-22 18:42:51,763 - INFO - [file_monitor.py:75] - Download speed for f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp: 10.90 MB/s
+2025-03-22 18:42:51,776 - INFO - [file_monitor.py:75] - Download speed for f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp: 31.83 MB/s
+2025-03-22 18:42:51,777 - INFO - [file_monitor.py:114] - 
+File Status Update for: f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp
+Current Size: 0.96 MB
+Download Speed: 31.83 MB/s
+Time Elapsed: 0.0 seconds
+Stable Count: 0
+Check Count: 5
+Status: Downloading
+2025-03-22 18:42:54,465 - INFO - [file_monitor.py:358] - New file detected: C:\Users\aakas\Downloads\pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:54,466 - INFO - [file_monitor.py:370] - Added to pending files: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:54,498 - INFO - [file_monitor.py:341] - Pending file no longer exists: C:\Users\aakas\Downloads\pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:54,500 - INFO - [file_monitor.py:324] - Completed processing for: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:54,737 - INFO - [file_monitor.py:237] - Removed f8b9b85c-90f4-44f2-b5d3-976599673d4a.tmp from tracking
+2025-03-22 18:42:54,738 - INFO - [file_monitor.py:411] - Added completed download to pending: pexels-photo-1108099 (1).jpeg.crdownload
+2025-03-22 18:42:54,825 - INFO - [file_monitor.py:411] - Added completed download to pending: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:54,828 - INFO - [file_monitor.py:65] - Initial size for pexels-photo-1108099 (1).jpeg: 0.96 MB
+2025-03-22 18:42:55,008 - INFO - [file_monitor.py:114] - 
+File Status Update for: pexels-photo-1108099 (1).jpeg
+Current Size: 0.96 MB
+Download Speed: 0.00 MB/s
+Time Elapsed: 0.2 seconds
+Stable Count: 0
+Check Count: 5
+Status: Stabilizing
+2025-03-22 18:42:55,503 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099 (1).jpeg: 1/3
+2025-03-22 18:42:56,504 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099 (1).jpeg: 2/3
+2025-03-22 18:42:57,506 - INFO - [file_monitor.py:148] - Stability progress for pexels-photo-1108099 (1).jpeg: 3/3
+2025-03-22 18:42:57,508 - INFO - [file_monitor.py:164] - File pexels-photo-1108099 (1).jpeg is ready for processing:
+Final Size: 0.96 MB
+Total Checks: 8
+Time Taken: 2.7 seconds
+2025-03-22 18:42:57,509 - INFO - [file_monitor.py:346] - File ready for processing: C:\Users\aakas\Downloads\pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:57,510 - INFO - [file_monitor.py:265] - Starting to process file: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:57,511 - INFO - [file_monitor.py:276] - Successfully verified file access: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:57,512 - INFO - [file_monitor.py:288] - Generating checksum for: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:42:57,518 - INFO - [file_monitor.py:298] - Duplicate file detected: C:\Users\aakas\Downloads\pexels-photo-1108099 (1).jpeg matches C:\Users\aakas\Downloads\pexels-photo-1108099.jpeg
+2025-03-22 18:43:09,056 - INFO - [file_monitor.py:421] - User chose to delete duplicate file: C:\Users\aakas\Downloads\pexels-photo-1108099 (1).jpeg
+2025-03-22 18:43:09,084 - INFO - [file_monitor.py:237] - Removed pexels-photo-1108099 (1).jpeg from tracking
+2025-03-22 18:43:09,085 - INFO - [file_monitor.py:324] - Completed processing for: pexels-photo-1108099 (1).jpeg
+2025-03-22 18:43:40,815 - INFO - [file_monitor.py:459] - File monitoring stopped by user
